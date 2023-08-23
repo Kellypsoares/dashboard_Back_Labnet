@@ -1,6 +1,8 @@
 import express from "express";
+import cors from 'cors'
 import { Sequelize, DataTypes } from "sequelize";
 const app = express()
+app.use(cors())
 // passar as credenciais do banco, onde ele tá, o tipo, senha ...
 const sequelize = new Sequelize('testeapi','user_kelly','password',{
   host: '127.0.0.1',
